@@ -1,4 +1,4 @@
-"""a program to gain practice with functions by taking the number of guests at a tea party and returning the resources needed to throw the party"""
+"""a program to get practice writing functions - takes # of guests and returns party details and costs"""
 
 __author__: str = "730772504"
 
@@ -29,7 +29,10 @@ def tea_bags(people: int) -> int:
 
 def treats(people: int) -> int:
     """tells you how many treats you need based on the number of people attending the party"""
-    return int(tea_bags(people) * 1.5)
+    return int(tea_bags(people=people) * 1.5)
+
+
+# assigns parameter people the value of the local variable people from the tea_bags function
 
 
 def cost(tea_count: int, treats_count: int) -> float:

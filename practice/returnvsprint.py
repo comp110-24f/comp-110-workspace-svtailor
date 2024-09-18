@@ -9,3 +9,9 @@ def division(x: int, y: int) -> float:
 print(division(y=64, x=16))
 
 print(int(64 / 16))
+
+age: int = 18
+print(age)
+
+age = age + 1
+print(age)

@@ -3,6 +3,10 @@
 
 def less_than_10(num: int) -> bool:
     """Tells me if num is less than 10"""
+    dub: int = num * 2
+    dub = dub - 1
+    # creates a new variable named dub with type in and the value of the inputted number times 2
+    print(dub)
     if num < 10:
         print("small number!")
     else:
@@ -27,4 +31,4 @@ def check_first_letter(word: str, letter: str) -> str:
         return "no match :("
 
 
-print(check_first_letter("suhani", "h"))
+less_than_10(num=5)
