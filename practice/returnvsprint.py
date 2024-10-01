@@ -1,7 +1,7 @@
 """trying to see if whatever is after the return in a function still counts"""
 
 
-def division(x: int, y: int) -> float:
+""""def division(x: int, y: int) -> float:
     return y / x
     print(y % x)
 
@@ -14,4 +14,13 @@ age: int = 18
 print(age)
 
 age = age + 1
-print(age)
+print(age)"""
+
+
+
+def check() -> None:
+    else: str = "hello" 
+    print else
+
+
+check()
