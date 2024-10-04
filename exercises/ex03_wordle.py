@@ -10,7 +10,7 @@ def main(secret: str) -> None:
     won: bool = False
     user_guess: str = ""  # empty string so i can replace it w new guesses
 
-    while turn <= 6:
+    while turn <= 6 and won == False:
         # uses an f string
         print(f"=== Turn {turn}/6 ===")
         user_guess = input_guess(len(secret))
@@ -19,7 +19,7 @@ def main(secret: str) -> None:
         if user_guess == secret:
             won = True
             print(f"You won in {turn}/6 turns!")
-            exit()
+            # exit()
 
         turn += 1
 
@@ -41,9 +41,11 @@ def contains_char(test_word: str, test_char: str) -> bool:
     assert len(test_char) == 1
     """checks to see if an inputted character is present in word of any length"""
     index: int = 0
+    # check: bool = False
 
     while index < len(test_word):
         if test_word[index] == test_char:
+            # check = True
             return True
 
         # don't add an elif that returns as false because then
@@ -52,6 +54,9 @@ def contains_char(test_word: str, test_char: str) -> bool:
 
         index += 1
 
+    # if check == False:
+    return False
+
 
 def emojified(guess: str, secret: str) -> str:
     """emojify the validity of the user guess compared to secret word"""
@@ -59,7 +64,7 @@ def emojified(guess: str, secret: str) -> str:
     assert len(guess) == len(secret)
     # error if guess word isn't the same length as secret word
 
-    index: int = 0  # counts until
+    index: int = 0  # loops through characters of guess word
 
     white_box: str = "\U00002B1C"
     green_box: str = "\U0001F7E9"
