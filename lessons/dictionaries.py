@@ -27,3 +27,5 @@ ice_cream.pop("strawberry")
 for flavor in ice_cream:
     tally: int = ice_cream[flavor]
     print(f"{flavor} has {tally} orders")
+
+# to access a key use a for in loop, to access value use the
